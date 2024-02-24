@@ -1,0 +1,29 @@
+@import 'partials/mixins';
+@import 'partials/variable';
+
+body{
+    
+    .procedePago{
+        width: 100%;
+        @include imagenBackground('../img/alexandra-luniel-86T5I7ZtjmM-unsplash.jpg');
+        section{
+            opacity: 1;
+            display:flex;
+            flex-flow: row wrap;
+            max-width: 1100px;
+            margin: 0 auto;
+            .direccionEnvio{
+                @include contenedorPago(200px);
+                margin-bottom: 10px;
+                margin-top: 60px;
+            }
+            .detalleProducto{
+                @include contenedorPago(500px);
+            }
+            .formaPago{
+                @include contenedorPago(350px);
+            }
+        }
+
+    }
+}

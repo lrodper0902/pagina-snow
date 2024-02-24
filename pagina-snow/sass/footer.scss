@@ -1,0 +1,32 @@
+@import 'partials/mixins';
+
+footer{
+    background: #6a939b;
+
+    .footer{
+        padding: 50px 30px;
+        display:grid;
+        grid-template-columns:  repeat(auto-fill, minmax(200px, 1fr));
+        max-width: 1000px;
+        gap:50px;
+        margin:0 auto;
+        color:rgb(56, 56, 56);
+        margin-top: 50px;
+
+        .social{
+            a{
+                font-size: 20px;
+                padding:10px;
+            }
+            .bi-facebook{
+                color:rgb(22, 22, 87);
+            }
+            .bi-twitter{
+                color:rgb(0, 234, 234)
+            }
+            .bi-instagram{
+                color: rgb(255, 0, 140);
+            }
+        }
+    }
+}

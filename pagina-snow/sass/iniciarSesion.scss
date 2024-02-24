@@ -1,0 +1,10 @@
+@import 'partials/mixins';
+@import 'partials/variable';
+
+.pie-imagen{
+    @include imagenBackground('../img/principal-novedades.jpg');
+    background-attachment: fixed;
+    height: 230px;
+    margin-bottom: -50px;
+    margin-top: 50px;
+}

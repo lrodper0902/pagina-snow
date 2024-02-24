@@ -1,0 +1,98 @@
+@import 'partials/mixins';
+@import 'partials/variable';
+
+.producto-descripcion{
+    grid-template-columns: 1.5fr 1fr;
+    @include displayGrid(0px, 1300px);
+
+    .imagen-producto{
+        display:grid;
+        grid-template-columns:1fr 5fr;
+        gap:20px;
+        .imagen-seccion{
+            grid-column: 1/2;
+            img{
+                width: 100%;
+                padding-bottom: 20px;
+            }
+        }
+        .imagen-principal{
+            grid-column: 2/3;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
+    @keyframes aparecer1 {
+        from{
+            filter: grayscale(0%);
+            transform: translateY(-80px);
+        }
+        to{
+            transform: translateY(0px);
+        }
+    }
+}
+
+.descripcion-compra{
+    padding:100px 50px 150px 50px;
+    animation: aparecer2 1s ease-in-out;
+        .input-cant{
+        font-size: 18px; 
+        text-align: center;
+        padding: 5px 0px;  
+    }
+
+    @keyframes aparecer2 {
+        from{
+            color: $WHITE;
+            transform: translateY(100px);
+        }
+        to{
+            transform: translateY(0px);
+        }
+    }
+    h1{
+        font-size: 40px;
+    }
+
+    .precioProducto{
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .descripcion-producto{
+        margin-bottom: 50px;
+    }
+    .negro{
+        @include colorArticuloGrande(#000000);
+    }
+    .gris{
+        @include colorArticuloGrande(gray);
+    }
+    .blanco{
+        @include colorArticuloGrande($WHITE);
+    }
+    .azul{
+        @include colorArticuloGrande(#385AB6);
+    }
+    .verde{
+        @include colorArticuloGrande(#000000);
+    }
+    .rosa{
+        @include colorArticuloGrande(#D83775);
+    }
+    .amarillo{
+        @include colorArticuloGrande(#FFBC2B);
+    }
+    .estampado{
+        background: url(../img/diseño.jpeg);
+        @include colorArticuloGrande('');
+    }
+    .centrar-btn{
+        margin-bottom: 50px;
+        .btn-product{
+            @include boton-carrito($WHITE, 0.5px, 16px, 12px 70px);
+        }
+    }
+}

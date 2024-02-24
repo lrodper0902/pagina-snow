@@ -1,0 +1,91 @@
+@import 'partials/variable';
+@import 'partials/mixins';
+
+header{
+    nav{
+        // height: 500px;
+        display: grid;
+        grid-template-rows: 150px 1fr;
+        justify-content: end;
+
+        .principal{
+            grid-row: 2/3;
+            padding-right:40px;
+
+            h2{font-size: 60px;}
+
+            p{
+                font-size: 18px;
+                font-family: "PT Sans", 
+                sans-serif;
+                font-weight: 700;
+            }
+        }
+
+        .menu{
+            position: fixed;
+            width: 100%;
+            background:rgba($BLACK, $alpha: 0.2)  ;
+            transition: 0.2s all ease-in-out;
+        }
+
+        .menu:hover{
+            background:rgba($BLACK, $alpha: 0.8);
+            a{
+                color: $WHITE;
+            }
+            .icono{
+                color:$CYAN;
+            }
+        }
+
+        .nav{
+            height: 80px;
+            @include displayFlex(space-between, center);
+            z-index: 9999;
+            .buscador-li{
+                padding-right: -30px;
+                .buscador{
+                    background: transparent;
+                    border: 0px;
+                    text-transform: uppercase;
+                    color:$BLACK;
+                }                
+            }
+
+            .icono{
+                @include decoration-text($CYAN, 3px, 40px);
+                font-family: "Black Han Sans", sans-serif;
+                font-weight: 600;
+                padding-left: 40px;
+                @include displayFlex('', center);
+
+                img{
+                    margin-top: -16px;
+                    padding-left: 5px;
+                }
+            }
+
+            ul li{
+                list-style: none;
+                display:inline;
+                padding-right: 40px;
+                align-items: center;
+
+                a{
+                    font-weight: 500;
+                    @include decoration-text($BLACK, 2px, 18px);
+                }
+                a:hover{
+                    color:rgb(129, 157, 211);
+                }
+            }
+        }
+
+        hr{
+            margin-top: -18px;
+            width: 95%;
+            color: $WHITE;
+        }
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Chonburi&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <div class="nav">
+                    <a class="icono" href="index.html">
+                        <p>Snow</p>
+                        <img src="img/icon2.png" width="60px" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="tablas.html">Tablas Snow</a></li>
+                        <li><a href="casco.html">Casco</a></li>
+                        <li><a href="gafas.html">Gafas</a></li>
+                    </ul>  
+                    <ul>
+                        <li><a href="buscar.html"><i class="bi bi-search"></i> Buscar</a></li>
+                        <li><a href="iniciarSesion.html">Iniciar Sesión</a></li>  
+                        <li><a href="carritoCompra.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></a></li>
+                    </ul>
+                  
+                </div>   
+                <hr>  
+            </div>          
+        </nav>
+    </header>
+
+    <main class="carritoCompra" id="articulos-carrito">
+
+        <section class="carrito-productoss">
+            <!-- <article class="articulos"> -->
+                <p></p>
+                <h2>Todos los artículos</h2>
+                <article id="product-cesta">
+                    <article class="articulos">
+                        <div class="card-cesta">
+                            <div class="img">
+                                <img src="img/gafas/gafas10.jpg" alt="">
+                            </div>
+                            <div class="descripcion-articulo">
+                                <p class="descrip-articulo" id="descripcion-articulo">Nombre producto</p>
+                                <div class="color-articulo"></div>
+                                <div>
+                                    <p class="precio-articulo">Precio</p>
+                                </div>
+                            </div>
+                            <div clasS="iconos-cesta">
+                                <div class="crementar">
+                                    <button id="decrementar">-</button>
+                                    <input class="input-cant" size="2" type="text" id="cantidad" value="1" min="1">
+                                    <button id="crementar">+</button>
+                                </div>
+                                <i class="bi bi-suit-heart-fill"></i>
+                                <i class="bi bi-trash3"></i>
+                            </div>
+                        </div>                    
+                    </article>                    
+                </article>
+
+        </section>
+
+        <section class="carrtio-comprarAhora">
+            <h2>Resumen del pedido</h2>
+            <p>400$</p>
+            <p class="envio"><i class="bi bi-truck"></i> Envío de 4 a 5 días hábiles</p>
+            <div>
+                <a class="boton-compra" href="procedePago.html" target="_blank">Comprar ahora</a>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer">
+            <div class="footer-section about">
+                <h3>Acerca de Nosotros</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas laboriosam in nesciunt id inventore voluptate dolore animi illum culpa.</p>
+            </div>
+
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p>Dirección: Pueblo, Ciudad, País</p>
+                <p>Email: info@gmail.com</p>
+                <p>Teléfono: +34 999 999</p>
+            </div>
+
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Snow Store. Todos los derechos reservados.</p>
+        </div>     
+        </section>
+
+    </footer>
+    <script src="js/botonAñadir.js"></script>
+    <script src="js/carritocompra.js"></script>
+</body>
+</html>

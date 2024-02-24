@@ -1,0 +1,195 @@
+@import 'partials/mixins';
+@import 'partials/variable';
+
+
+// CSS para index, pagina de tabla snow, gafas, fijadores, casco
+main{
+    .categorias{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1300px;
+        margin: 0 auto;
+        gap:10px;
+        margin-top: -150px; 
+        
+        @keyframes elevar {
+            from{
+                background: $WHITE;
+                transform: translateY(60px);
+            }
+            to{
+                transform: translateY(0px);
+            }
+        }
+        .contenido{
+            overflow: hidden;
+            animation: 0.6s elevar ease-in;
+            box-shadow: 10px 10px 20px rgb(117, 117, 117);
+            width:300px;
+        }
+            .categoria-tabla{
+                @include formatoCategorias;
+                @include imagenBackground('../img/tabla.png');
+                a{
+                    @include centrar-a;
+                }
+            }
+            .categoria-tabla:hover{
+                @include categoriasHover(60%, 1.2);
+                a{display: block;}
+            }
+            .categoria-casco{
+                @include formatoCategorias;
+                @include imagenBackground('../img/casco.jpg');
+                a{@include centrar-a;}
+            }
+            .categoria-casco:hover{
+                @include categoriasHover(60%, 1.2);
+                a{display: block;}
+            }
+            .categoria-gafas{
+                @include formatoCategorias;
+                @include imagenBackground('../img/gafas.jpg');
+                a{ @include centrar-a;}
+            }
+            .categoria-gafas:hover{
+                @include categoriasHover(60%, 1.2);
+                a{display: block;}
+            }
+            .categoria-botas{
+                @include formatoCategorias;
+                @include imagenBackground('../img/botas.jpg');
+                a{ @include centrar-a;}
+            }
+            .categoria-botas:hover{
+                @include categoriasHover(60%, 1.2);
+                a{display: block;}
+            }
+    }
+
+    .novedades{
+        margin-top: 100px;
+        @include imagenBackground('../img/imagen1.jpg');
+        display:grid;
+        align-items: center;
+        grid-template-columns: 3fr 1fr;
+        padding:70px;
+        background-attachment: fixed;
+        // color:$AZUL-OSCURO;
+        color:black;
+        font-weight: 600;
+        h3{
+            font-weight: 700;
+            font-size: 40px;
+        }
+
+        .descrip-novedades{
+            padding: 30px;
+        }
+
+        .mas-vendido{
+            
+        }
+        // h2{
+        //     font-size: 30px;
+        //     text-transform: uppercase;
+        //     letter-spacing: 2px;
+        // }      
+        
+        // .productos{
+            
+        // display: grid;
+        // grid-template-columns: repeat(5, 1fr);
+
+        //     .card-productos{
+        //         padding-bottom: 10px;
+        //         border: 1px solid rgb(184, 202, 201);
+        //         display: grid;
+        //         justify-content: center;
+        //         a{
+        //             text-decoration: none;
+        //             color: $BLACK;
+        //         }
+        
+        //         p{
+        //             margin-top: -20px;
+        //             text-align: center;
+        //             font-size: 20px;
+        //         }
+        
+        //         img{
+        //             max-height: 320px;
+        //         }
+        
+        //         .tabla-img{
+        //             padding-left: 30%;
+        //             padding-top: 10px;
+        //             padding-bottom: 30px;
+        //         }
+        
+        //         .centrar-btn{
+        //             display:grid;
+        //             justify-content: center;
+        
+        //             .btn-product{
+        //                 @include boton-carrito($WHITE, 0.5px, 16px, 12px 30px);
+        //             }
+        //         }
+        //     }
+        }
+    }
+
+    
+                                //Buscar
+ 
+                        //tablas snow
+
+    .productos-tabla, .productos-casco, .productos-fijadores, .productos-gafas{
+        grid-template-columns: repeat(3, 1fr) ;
+        @include displayGrid(40px, 1000px);
+        
+        .card-productos{
+            padding-bottom: 10px;
+            border: 1px solid rgb(184, 202, 201);
+            display: grid;
+            width: 300px;
+            justify-content: center;
+            a{
+                text-decoration: none;
+                color: $BLACK;
+            }
+
+            p{
+                margin-top: -20px;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .contenedor-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 80%; 
+                padding-bottom: 10px;
+                img {
+                    max-width: 100%; 
+                    max-height: 100%; 
+                }
+            }
+
+            // .tabla-img{
+            //     padding-top: 10px;
+            //     padding-bottom: 30px;
+            // }
+
+            .centrar-btn{
+                display:grid;
+                justify-content: center;
+
+                .btn-product{
+                    @include boton-carrito($WHITE, 0.5px, 16px, 12px 30px);
+                }
+            }
+        }
+    }
+

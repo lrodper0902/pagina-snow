@@ -1,0 +1,95 @@
+@import 'variable';
+
+@mixin formatoCategorias{
+    width: 300px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+@mixin displayGrid($gap, $max-width){
+    display: grid;
+    max-width: $max-width;
+    margin: 0 auto;
+    gap:50px;
+}
+
+@mixin displayFlex($justify, $align){
+    display: flex;    
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin imagenBackground($url){
+    background: url($url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin categoriasHover($porciento, $scale){
+    filter: brightness($porciento);
+    transform: scale($scale);
+    z-index: 0;
+}
+
+@mixin centrar-a{
+    display: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+@mixin decoration-text ($COLOR, $letter-spacing, $font-size){
+    font-size: $font-size;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $COLOR;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin boton-carrito ($COLOR, $letter-spacing, $font-size, $padding){
+    @include decoration-text($COLOR, $letter-spacing, $font-size);
+    padding: $padding;
+    background:$AZUL-CLARO;
+    height: 30px;
+    text-align: center;
+}
+
+@mixin colorBoton ($color){
+    background: $color;
+    height: 50px;
+    width: 50px;
+    border:0px;
+}
+
+@mixin colorArticuloGrande ($color){
+    border-radius: 100%;
+    border:0.5px solid rgb(137, 137, 137);
+    width: 40px;
+    height: 40px;
+    background: $color;
+    margin-bottom: 40px;
+}
+
+@mixin colorArticulo($color){
+    border-radius: 100%;
+    border:0.5px solid rgb(137, 137, 137);
+    width: 20px;
+    height: 20px;
+    background: $color;
+    margin-bottom: 40px;
+}
+
+//Forma de pago
+
+@mixin contenedorPago($height){
+    background: $AZUL-PASTEL;
+    flex: 1 0 100%;
+    height: $height;
+    margin: 10px 0px;
+}
+

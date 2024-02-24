@@ -1,0 +1,134 @@
+@import 'partials/mixins';
+@import 'partials/variable';
+
+.carritoCompra{
+    font-size: 20px;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    padding:20px 80px;
+    background: #cedadc;    
+    .articulos{
+        display: grid;
+        grid-template-rows: 1fr;
+ 
+        .card-cesta{
+            // border:1px solid rgb(199, 199, 199);
+            background: white;
+            padding: 7px;
+            display: flex;
+            flex-flow: nowrap row;
+            width: 95%;
+            .img{
+                width:150px;   
+                @include displayFlex(center, center);
+                img{
+                    width: 150px;
+                    height: 150px;
+                    @include imagenBackground('');
+                }
+            }
+            .descripcion-articulo{
+                padding-left: 20px;
+                flex: 1 0 50%;
+                align-items: stretch;
+                .descrip-articulo{
+                    font-size: 18px;
+                }
+                .color-articulo{
+                    border-radius: 100%;
+                    width: 20px;
+                    height: 20px;
+                    background: rgb(255, 207, 136);
+
+                }
+                .negro{
+                    @include colorArticulo(#000000);
+                }
+                .gris{
+                    @include colorArticulo(gray);
+                }
+                .blanco{
+                    @include colorArticulo($WHITE);
+                }
+                .azul{
+                    @include colorArticulo(#385AB6);
+                }
+                .verde{
+                    @include colorArticulo(#000000);
+                }
+                .rosa{
+                    @include colorArticulo(#D83775);
+                }
+                .amarillo{
+                    @include colorArticulo(#FFBC2B);
+                }
+                .estampado{
+                    background: url(../img/diseño.jpeg);
+                    @include colorArticulo('');
+                }
+                div{
+                    display: flex;
+                    align-items: end;
+                    .precio-articulo{
+                        font-weight: 600;
+                    }
+                }
+            }
+            .iconos-cesta{
+                width: 400px;
+                background: white;
+                @include displayFlex(end, end);
+                padding-bottom: 10px;
+                .bi{
+                    padding: 0px 7px;
+                }
+                .crementar{
+                    padding: 0px 15px;
+                    button{
+                        background: white;
+                        border: 1px solid rgb(219, 219, 219);
+                        padding: 2px 6px;
+                    }
+                    .input-cant{
+                        font-size: 16px;
+                        text-align: center;
+                        padding: 4px 6px;  
+                        width: 20px;
+                        border: 1px solid rgb(219, 219, 219);
+                    }
+                }
+            }
+        }
+    }
+    .carrtio-comprarAhora{
+        font-size: 20px;
+        padding: 0px 50px;
+        background: white;
+        .envio{
+            font-size: 11px;
+            color: #5f5f5f;
+            .bi{
+                font-size: 15px;
+                padding-right: 4px;
+            }
+        }
+        p{
+            font-size: 30px;
+            font-weight: 600;
+            text-align: end;
+        }
+        div{
+            @include displayFlex(center, '');
+            .boton-compra{
+                background: #000000;
+                padding: 10px 0px;
+                width: 100%;
+                border: 0px;
+                text-align: center;
+                @include decoration-text (white, 1px, 20px)
+            }            
+        }
+
+    }
+
+}

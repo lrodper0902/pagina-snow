@@ -1,0 +1,57 @@
+
+{ 
+    "id":20 ,
+    "nombre":"EVIL TWIN TABLA DE SNOWBOARD",
+    "descripcion":"La EVIL TWIN tiene shape Twin 3BT con una zona plana suficientemente ancha para ser estable en jibbin, sin dejar de ir perfectamente suave en giros y aterrizajes. Una tabla muy versatil tanto para Park como para kickers en Backcountry. ",
+    "color":"blanco",
+    "categoria":"tabla",
+    "precio":269,
+    "novedad": false,
+    "numero_ventas":0,
+    "stock":80,
+    "imagen":"https://helpsnowboards.com/wp-content/uploads/2019/10/KIDS-01.jpg",
+    "imagen2":"https://helpsnowboards.com/wp-content/uploads/2021/11/The-Future-3.jpg",
+    "imagen3":"https://helpsnowboards.com/wp-content/uploads/2021/11/The-Future-1.jpg"      
+},
+{ 
+    "id": 21,
+    "nombre":"RAVEN SUPREME WHITE TABLA DE SNOWBOARD",
+    "descripcion":"La EVIL TWIN tiene shape Twin 3BT con una zona plana suficientemente ancha para ser estable en jibbin, sin dejar de ir perfectamente suave en giros y aterrizajes. Una tabla muy versatil tanto para Park como para kickers en Backcountry. ",
+    "color":"estampado",
+    "categoria":"tabla",
+    "precio":355,
+    "novedad": true,
+    "numero_ventas":0,
+    "stock":80,
+    "imagen":"https://helpsnowboards.com/wp-content/uploads/2023/11/1-2.jpg",
+    "imagen2":"https://helpsnowboards.com/wp-content/uploads/2023/11/3-2.jpg",
+    "imagen3":"https://helpsnowboards.com/wp-content/uploads/2023/11/5-2.jpg"      
+},
+
+
+
+
+
+<article class="articulos">
+<div class="card-cesta">
+    <div class="img">
+        <img src="${productoCarrito.imagenes}" alt="">
+    </div>
+    <div class="descripcion-articulo">
+        <p class="descrip-articulo" id="descripcion-articulo">${productoCarrito.nombre}</p>
+        <div class="${productoCarrito.color}€"></div>
+        <div>
+            <p class="precio-articulo">${productoCarrito.precio}</p>
+        </div>
+    </div>
+    <div clasS="iconos-cesta">
+        <div class="crementar">
+            <button id="decrementar">-</button>
+            <input class="input-cant" size="2" type="text" id="cantidad" value="1" min="1">
+            <button id="crementar">+</button>
+        </div>
+        <i class="bi bi-suit-heart-fill"></i>
+        <i class="bi bi-trash3"></i>
+    </div>
+</div>                    
+</article>   
